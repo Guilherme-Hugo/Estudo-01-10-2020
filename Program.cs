@@ -1,26 +1,24 @@
-﻿/*
-* Olá cenouras e cenoures!
-*/
 using System;
 
 namespace Erebus_v3
 {
+	//Classe do Personagem
 	class Personagem
 	{
 		public string classe;
-		public int escolha;
+		public int escolha; //Variavel responsavel pela escolha da classe
 		public string name;
 		public int life;
 		public int def;
 		public int atk;
 	}
 	
+	//Programa principal
 	class MainProgram
 	{
 		public static void Main(string[] args)
 		{
-			
-			
+			//Bloco inicial
 			Personagem p1 = new Personagem();
 			
 			Console.WriteLine(" --------------------\n" + 
@@ -34,6 +32,7 @@ namespace Erebus_v3
 			p1.escolha = int.Parse(Console.ReadLine());
 			Console.Clear();
 			
+			//Bloco de escolha de classe
 			if (p1.escolha == 1){
 				p1.classe = "Guerreiro";
 				p1.life = 150;
@@ -51,6 +50,7 @@ namespace Erebus_v3
 				p1.atk = 10;
 			}
 			
+			//Bloco final/status
 			Console.WriteLine (" --------------------------------------------------------------------\n" + 
 			                   "      Nome: {0} | Classe: {1}                                      \n" + 
 			                   "      Vida {2} | Defesa {3} | Ataque {4}                           \n" +
